@@ -19,8 +19,8 @@ else:
 
 if api_key:
     genai.configure(api_key=api_key)
-    # Using gemini-2.5-flash (stable active model)
-    model = genai.GenerativeModel('gemini-2.5-flash')
+    # Using gemini-flash-latest to automatically point to the current active flash model
+    model = genai.GenerativeModel('gemini-flash-latest')
 else:
     st.warning("⚠️ Please provide a Gemini API Key in Streamlit Secrets or the sidebar to activate the AI Tutor.")
 
