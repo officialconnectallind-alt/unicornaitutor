@@ -19,10 +19,10 @@ else:
 
 if api_key:
     genai.configure(api_key=api_key)
-    # Using gemini-2.5-flash (active model)
-   model = genai.GenerativeModel('gemini-3.8-flash')
+    # Using gemini-2.5-flash (stable active model)
+    model = genai.GenerativeModel('gemini-2.5-flash')
 else:
-    st.warning(".")
+    st.warning("⚠️ Please provide a Gemini API Key in Streamlit Secrets or the sidebar to activate the AI Tutor.")
 
 # --- SIDEBAR: CURRICULUM NAVIGATION ---
 st.sidebar.title("🦄 Unicorn Blueprint")
